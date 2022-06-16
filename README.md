@@ -37,7 +37,7 @@ $ pip install .
 - ### addExt
 Add ext to path.
 
-Support Windows and Linux paths
+Support Windows and Linux paths.
 
 ```python
 from utilspy_g4 import addExt
