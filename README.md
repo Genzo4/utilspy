@@ -27,6 +27,7 @@ Download and install the package:
 ```bash
 $ git clone https://github.com/Genzo4/utilspy
 $ cd utilspy
+$ pip install -r requirements.txt
 $ pip install .
 ```
 
@@ -77,6 +78,7 @@ $ pip install utilspy-g4
 ```bash
 $ git clone https://github.com/Genzo4/utilspy
 $ cd utilspy
+$ pip install -r requirements.txt
 $ pip install .
 ```
 
