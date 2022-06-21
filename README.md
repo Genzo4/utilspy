@@ -48,6 +48,19 @@ ext = '2'
 newPath = addExt(path, ext)     # newPath = '/test/test.2.png'
 ```
 
+- ### compareFrames
+Compare 2 frames.
+
+```python
+from utilspy_g4 import compareFrames
+
+is_equal = compareFrames('path_to_frame_1.png', 'path_to_frame_2.png')
+```
+
+***
+
+[Changelog](https://github.com/Genzo4/utilspy/blob/main/CHANGELOG.md)
+
 ***
 
 ![Language](https://img.shields.io/badge/Русский-brigthgreen)
@@ -98,3 +111,16 @@ path = '/test/test.png'
 ext = '2'
 newPath = addExt(path, ext)     # newPath = '/test/test.2.png'
 ```
+
+- ### compareFrames
+Сравнение двух кадров (изображений).
+
+```python
+from utilspy_g4 import compareFrames
+
+is_equal = compareFrames('path_to_frame_1.png', 'path_to_frame_2.png')
+```
+
+***
+
+[Changelog](https://github.com/Genzo4/utilspy/blob/main/CHANGELOG.md)
