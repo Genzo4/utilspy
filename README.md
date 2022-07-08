@@ -75,6 +75,15 @@ path = '/test/test.2.png'
 newPath = delExt(path, 2)     # newPath = '/test/test'
 ```
 
+- ### templatedRemoveFiles
+Remove files by template
+
+```python
+from utilspy_g4 import templatedRemoveFiles
+
+templatedRemoveFiles('/tmp/test_*.txt')
+```
+
 ***
 
 [Changelog](https://github.com/Genzo4/utilspy/blob/main/CHANGELOG.md)
@@ -155,6 +164,15 @@ newPath = delExt(path)     # newPath = '/test/test.2'
 
 path = '/test/test.2.png'
 newPath = delExt(path, 2)     # newPath = '/test/test'
+```
+
+- ### templatedRemoveFiles
+Удаление файлов по шаблону
+
+```python
+from utilspy_g4 import templatedRemoveFiles
+
+templatedRemoveFiles('/tmp/test_*.txt')
 ```
 
 ***
