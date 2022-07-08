@@ -1,5 +1,6 @@
 import os
 import cv2
+import glob
 
 
 def addExt(path: str, ext: str) -> str:
@@ -52,3 +53,17 @@ def delExt(path: str, extCount: int = 1) -> str:
         pathNoExt = os.path.splitext(pathNoExt)[0]
 
     return pathNoExt
+
+
+def templatedRemoveFiles(template: str) -> None:
+    """
+    Remove files by template
+
+    :param template: Template
+    :return: None
+    """
+
+    removeFiles = glob.iglob(template)
+
+    for _file in removeFiles:
+        os.remove(_file)
