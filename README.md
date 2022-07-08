@@ -57,6 +57,24 @@ from utilspy_g4 import compareFrames
 is_equal = compareFrames('path_to_frame_1.png', 'path_to_frame_2.png')
 ```
 
+- ### delExt
+Del ext from path.
+
+Support Windows and Linux paths.
+
+```python
+from utilspy_g4 import delExt
+
+path = '/test/test.png'
+newPath = delExt(path)     # newPath = '/test/test'
+
+path = '/test/test.2.png'
+newPath = delExt(path)     # newPath = '/test/test.2'
+
+path = '/test/test.2.png'
+newPath = delExt(path, 2)     # newPath = '/test/test'
+```
+
 ***
 
 [Changelog](https://github.com/Genzo4/utilspy/blob/main/CHANGELOG.md)
@@ -119,6 +137,24 @@ newPath = addExt(path, ext)     # newPath = '/test/test.2.png'
 from utilspy_g4 import compareFrames
 
 is_equal = compareFrames('path_to_frame_1.png', 'path_to_frame_2.png')
+```
+
+- ### delExt
+Удаляет одно или несколько расширений файла
+
+Обрабатывает как Windows пути, так и Linux.
+
+```python
+from utilspy_g4 import delExt
+
+path = '/test/test.png'
+newPath = delExt(path)     # newPath = '/test/test'
+
+path = '/test/test.2.png'
+newPath = delExt(path)     # newPath = '/test/test.2'
+
+path = '/test/test.2.png'
+newPath = delExt(path, 2)     # newPath = '/test/test'
 ```
 
 ***
