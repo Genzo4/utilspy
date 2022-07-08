@@ -3,6 +3,10 @@
 This document records all notable changes to
 [utilspy](https://github.com/Genzo4/utilspy).
 
+## 1.3.0 (2022-07-08)
+
+- function templatedRemoveFiles
+
 ## 1.2.0 (2022-07-08)
 
 - function delExt
