@@ -19,6 +19,7 @@ def addExt(path: str, ext: str) -> str:
 def compareFrames(framePath_1: str, framePath_2: str) -> bool:
     """
     Compare 2 frames
+
     :param framePath_1: Path to frame 1
     :param framePath_2: Path to frame 2
     :return: bool
@@ -34,3 +35,20 @@ def compareFrames(framePath_1: str, framePath_2: str) -> bool:
         return True
 
     return False
+
+
+def delExt(path: str, extCount: int = 1) -> str:
+    """
+    Del ext from path
+
+    :param path: Path to file
+    :param extCount: Count of deleted ext
+    :rtype: str
+    :return: Path without ext
+    """
+
+    pathNoExt = path
+    for _ in range(extCount):
+        pathNoExt = os.path.splitext(pathNoExt)[0]
+
+    return pathNoExt
