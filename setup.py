@@ -8,7 +8,7 @@ with open(path.join(top_level_directory, 'README.md'), encoding='utf-8') as file
 
 setup(
    name='utilspy_g4',
-   version='1.2.0',
+   version='1.3.0',
    description='Small utils for Python',
    long_description=long_description,
    long_description_content_type='text/markdown',
@@ -35,8 +35,12 @@ setup(
       'Topic :: Software Development :: Libraries :: Python Modules',
       'Topic :: Utilities'
    ],
-   keywords=['utils', 'utilspy', 'g4', 'add ext', 'addExt', 'addext', 'compareframes', 'compare frames',
-             'compareFrames', 'delExt', 'del ext', 'delext'],
+   keywords=['utils', 'utilspy', 'g4',
+             'add ext', 'addExt', 'addext',
+             'compareframes', 'compare frames', 'compareFrames',
+             'delExt', 'del ext', 'delext',
+             'templatedRemoveFiles', 'templated remove files', 'remove files',
+             ],
    license='MIT',
    packages=['utilspy_g4'],
    install_requires=['opencv-contrib-python'],
