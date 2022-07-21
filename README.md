@@ -36,7 +36,7 @@ $ pip install .
 ## Utils
 
 - ### addExt
-Add ext to path.
+Add extension to path.
 
 Support Windows and Linux paths.
 
