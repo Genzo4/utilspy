@@ -58,7 +58,7 @@ is_equal = compareFrames('path_to_frame_1.png', 'path_to_frame_2.png')
 ```
 
 - ### delExt
-Del ext from path.
+Del extension from path.
 
 Support Windows and Linux paths.
 
@@ -82,6 +82,27 @@ Remove files by template
 from utilspy_g4 import templatedRemoveFiles
 
 templatedRemoveFiles('/tmp/test_*.txt')
+```
+
+- ### getExt
+Get extension from path.
+
+Support Windows and Linux paths.
+
+```python
+from utilspy_g4 import getExt
+
+path = '/test/test.png'
+ext = getExt(path)     # ext = 'png'
+
+path = '/test/test.jpeg.png'
+ext = getExt(path)     # ext = 'png'
+
+path = '/test/test.jpeg.png'
+ext = getExt(path, 2)     # ext = 'jpeg'
+
+path = '/test/test.jpeg.png'
+ext = getExt(path, 0)     # ext = ''
 ```
 
 ***
@@ -173,6 +194,28 @@ newPath = delExt(path, 2)     # newPath = '/test/test'
 from utilspy_g4 import templatedRemoveFiles
 
 templatedRemoveFiles('/tmp/test_*.txt')
+```
+
+- ### getExt
+Возвращает расширение файла.
+Можно указать какое по счёту расширение надо вернуть.
+
+Обрабатывает как Windows пути, так и Linux.
+
+```python
+from utilspy_g4 import getExt
+
+path = '/test/test.png'
+ext = getExt(path)     # ext = 'png'
+
+path = '/test/test.jpeg.png'
+ext = getExt(path)     # ext = 'png'
+
+path = '/test/test.jpeg.png'
+ext = getExt(path, 2)     # ext = 'jpeg'
+
+path = '/test/test.jpeg.png'
+ext = getExt(path, 0)     # ext = ''
 ```
 
 ***
