@@ -67,3 +67,27 @@ def templatedRemoveFiles(template: str) -> None:
 
     for _file in removeFiles:
         os.remove(_file)
+
+
+def getExt(path: str, extCount: int = 1) -> str:
+    """
+    Return file extension from path
+
+    :param path: Path to file
+    :param extCount: Count of returned extension
+    :rtype: str
+    :return: Extension
+    """
+
+    pathNoExt = path
+    lastExt = ''
+    for _ in range(extCount):
+        splitPath = os.path.splitext(pathNoExt)
+        pathNoExt = splitPath[0]
+        lastExt = splitPath[1]
+
+    if lastExt != '':
+        # Del .
+        lastExt = lastExt[1:]
+
+    return lastExt
