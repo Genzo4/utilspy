@@ -8,7 +8,7 @@ with open(path.join(top_level_directory, 'README.md'), encoding='utf-8') as file
 
 setup(
    name='utilspy_g4',
-   version='1.3.0',
+   version='1.4.0',
    description='Small utils for Python',
    long_description=long_description,
    long_description_content_type='text/markdown',
@@ -40,6 +40,7 @@ setup(
              'compareframes', 'compare frames', 'compareFrames',
              'delExt', 'del ext', 'delext',
              'templatedRemoveFiles', 'templated remove files', 'remove files',
+             'getExt', 'get ext', 'getext',
              ],
    license='MIT',
    packages=['utilspy_g4'],
