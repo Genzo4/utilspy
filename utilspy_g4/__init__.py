@@ -103,4 +103,7 @@ def concatVideo(inPath_1: str, inPath_2: str, outPath: str):
     :return: None
     """
 
-    ffmpeg.input(f'concat:{inPath_1}|{inPath_2}').output(outPath, vcodec='copy', acodec='copy').overwrite_output().run()
+    ffmpeg.input(f'concat:{inPath_1}|{inPath_2}')\
+        .output(outPath, vcodec='copy', acodec='copy')\
+        .overwrite_output()\
+        .run(quiet = True)
