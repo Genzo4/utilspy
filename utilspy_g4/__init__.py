@@ -1,6 +1,7 @@
 import os
 import cv2
 import glob
+import ffmpeg
 
 
 def addExt(path: str, ext: str) -> str:
@@ -91,3 +92,15 @@ def getExt(path: str, extCount: int = 1) -> str:
         lastExt = lastExt[1:]
 
     return lastExt
+
+
+def concatVideo(inPath_1: str, inPath_2: str, outPath: str):
+    """
+    Concat 2 video files with same codecs (it use ffmpeg)
+    :param inPath_1: Path to 1 input video file
+    :param inPath_2: Path to 2 input video file
+    :param outPath: Path to output video file
+    :return: None
+    """
+
+    ffmpeg.input(f'concat:{inPath_1}|{inPath_2}').output(outPath, vcodec='copy', acodec='copy').overwrite_output().run()

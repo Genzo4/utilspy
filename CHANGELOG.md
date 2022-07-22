@@ -3,6 +3,10 @@
 This document records all notable changes to
 [utilspy](https://github.com/Genzo4/utilspy).
 
+## 1.5.0 (2022-07-22)
+
+- function concatVideo
+
 ## 1.4.0 (2022-07-21)
 
 - function getExt

@@ -105,6 +105,16 @@ path = '/test/test.jpeg.png'
 ext = getExt(path, 0)     # ext = ''
 ```
 
+- ### concatVideo
+Concat 2 video files with same codecs and params.
+It use ffmpeg. Install [ffmpeg](https://ffmpeg.org) and add it to PATH.
+
+```python
+from utilspy_g4 import concatVideo
+
+concatVideo('path_to_video_1.ts', 'path_to_video_2.ts', 'path_to_output_video.ts')
+```
+
 ***
 
 [Changelog](https://github.com/Genzo4/utilspy/blob/main/CHANGELOG.md)
@@ -216,6 +226,17 @@ ext = getExt(path, 2)     # ext = 'jpeg'
 
 path = '/test/test.jpeg.png'
 ext = getExt(path, 0)     # ext = ''
+```
+
+- ### concatVideo
+Объединение двух видео файлов с одинаковыми кодеками и параметрами в один файл.
+Используется ffmpeg. Для использования установите [ffmpeg](https://ffmpeg.org) 
+и пропишите его в PATH.
+
+```python
+from utilspy_g4 import concatVideo
+
+concatVideo('path_to_video_1.ts', 'path_to_video_2.ts', 'path_to_output_video.ts')
 ```
 
 ***
