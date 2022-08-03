@@ -115,7 +115,25 @@ from utilspy_g4 import concatVideo
 concatVideo('path_to_video_1.ts', 'path_to_video_2.ts', 'path_to_output_video.ts')
 ```
 
-***
+- ### intTo2str
+Convert integer to 2 chars string with 0.
+
+```python
+from utilspy_g4 import intTo2str
+
+time = f'{intTo2str(2)}:{intTo2str(23)}:{intTo2str(5)}' # time = '02-23-05'
+```
+
+- ### getFilesCount
+Get files count from template.
+
+Support Windows and Linux paths.
+
+```python
+from utilspy_g4 import getFilesCount
+
+getFilesCount('/tmp/test_*.txt')
+```
 
 [Changelog](https://github.com/Genzo4/utilspy/blob/main/CHANGELOG.md)
 
@@ -200,6 +218,8 @@ newPath = delExt(path, 2)     # newPath = '/test/test'
 - ### templatedRemoveFiles
 Удаление файлов по шаблону
 
+Обрабатывает как Windows пути, так и Linux.
+
 ```python
 from utilspy_g4 import templatedRemoveFiles
 
@@ -237,6 +257,27 @@ ext = getExt(path, 0)     # ext = ''
 from utilspy_g4 import concatVideo
 
 concatVideo('path_to_video_1.ts', 'path_to_video_2.ts', 'path_to_output_video.ts')
+```
+
+- ### intTo2str
+Преобразует число в строку из двух символов.
+Если число состоит из одной цифры, то спереди добавляется '0'.
+
+```python
+from utilspy_g4 import intTo2str
+
+time = f'{intTo2str(2)}:{intTo2str(23)}:{intTo2str(5)}' # time = '02-23-05'
+```
+
+- ### getFilesCount
+Возвращает количество файлов в папке по шаблону.
+
+Обрабатывает как Windows пути, так и Linux.
+
+```python
+from utilspy_g4 import getFilesCount
+
+getFilesCount('/tmp/test_*.txt')
 ```
 
 ***

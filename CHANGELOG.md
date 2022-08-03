@@ -3,6 +3,11 @@
 This document records all notable changes to
 [utilspy](https://github.com/Genzo4/utilspy).
 
+## 1.6.0 (2022-08-03)
+
+- function intTo2str
+- function getFilesCount
+
 ## 1.5.1 (2022-07-22)
 
 - set quiet on concatVideo
