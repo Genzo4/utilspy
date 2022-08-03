@@ -123,3 +123,16 @@ def getFilesCount(filesTemplate: str) -> int:
         i += 1
 
     return i
+
+
+def intTo2str(number: int) -> str:
+    """
+    Convert integer to 2 chars string with 0
+    :param number: 1 or 2 digit integer number
+    :return: 2 chars number with 0
+    """
+
+    if number < 10:
+        return '0' + str(number)
+
+    return str(number)
