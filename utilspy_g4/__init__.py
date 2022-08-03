@@ -107,3 +107,19 @@ def concatVideo(inPath_1: str, inPath_2: str, outPath: str):
         .output(outPath, vcodec='copy', acodec='copy')\
         .overwrite_output()\
         .run(quiet = True)
+
+
+def getFilesCount(filesTemplate: str) -> int:
+    """
+    Get files count from filesTemplate
+    :param filesTemplate:
+    :return: Files count from filesTemplate
+    """
+
+    files = glob.iglob(filesTemplate)
+
+    i = 0
+    for _ in files:
+        i += 1
+
+    return i
