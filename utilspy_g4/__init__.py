@@ -4,7 +4,7 @@ import glob
 import ffmpeg
 
 
-def addExt(path: str, ext: str) -> str:
+def add_ext(path: str, ext: str) -> str:
     """
     Add ext to path
 
@@ -14,23 +14,23 @@ def addExt(path: str, ext: str) -> str:
     :return: Path with added ext
     """
 
-    pathExt = os.path.splitext(path)
-    return pathExt[0] + '.' + ext + pathExt[1]
+    path_ext = os.path.splitext(path)
+    return path_ext[0] + '.' + ext + path_ext[1]
 
 
-def compareFrames(framePath_1: str, framePath_2: str) -> bool:
+def compare_frames(frame_path_1: str, frame_path_2: str) -> bool:
     """
     Compare 2 frames
 
-    :param framePath_1: Path to frame 1
-    :param framePath_2: Path to frame 2
+    :param frame_path_1: Path to frame 1
+    :param frame_path_2: Path to frame 2
     :return: bool
     """
 
     # TODO: Check different frames size
 
-    frame_1 = cv2.imread(framePath_1)
-    frame_2 = cv2.imread(framePath_2)
+    frame_1 = cv2.imread(frame_path_1)
+    frame_2 = cv2.imread(frame_path_2)
     diff = cv2.norm(frame_1, frame_2, cv2.NORM_L2)
 
     if diff == 0.0:
@@ -39,24 +39,24 @@ def compareFrames(framePath_1: str, framePath_2: str) -> bool:
     return False
 
 
-def delExt(path: str, extCount: int = 1) -> str:
+def del_ext(path: str, ext_count: int = 1) -> str:
     """
     Del ext from path
 
     :param path: Path to file
-    :param extCount: Count of deleted ext
+    :param ext_count: Count of deleted ext
     :rtype: str
     :return: Path without ext
     """
 
-    pathNoExt = path
-    for _ in range(extCount):
-        pathNoExt = os.path.splitext(pathNoExt)[0]
+    path_no_ext = path
+    for _ in range(ext_count):
+        path_no_ext = os.path.splitext(path_no_ext)[0]
 
-    return pathNoExt
+    return path_no_ext
 
 
-def templatedRemoveFiles(template: str) -> None:
+def templated_remove_files(template: str) -> None:
     """
     Remove files by template
 
@@ -64,59 +64,59 @@ def templatedRemoveFiles(template: str) -> None:
     :return: None
     """
 
-    removeFiles = glob.iglob(template)
+    remove_files = glob.iglob(template)
 
-    for _file in removeFiles:
-        os.remove(_file)
+    for file in remove_files:
+        os.remove(file)
 
 
-def getExt(path: str, extCount: int = 1) -> str:
+def get_ext(path: str, ext_count: int = 1) -> str:
     """
     Return file extension from path
 
     :param path: Path to file
-    :param extCount: Count of returned extension
+    :param ext_count: Count of returned extension
     :rtype: str
     :return: Extension
     """
 
-    pathNoExt = path
-    lastExt = ''
-    for _ in range(extCount):
-        splitPath = os.path.splitext(pathNoExt)
-        pathNoExt = splitPath[0]
-        lastExt = splitPath[1]
+    path_no_ext = path
+    last_ext = ''
+    for _ in range(ext_count):
+        split_path = os.path.splitext(path_no_ext)
+        path_no_ext = split_path[0]
+        last_ext = split_path[1]
 
-    if lastExt != '':
+    if last_ext != '':
         # Del .
-        lastExt = lastExt[1:]
+        last_ext = last_ext[1:]
 
-    return lastExt
+    return last_ext
 
 
-def concatVideo(inPath_1: str, inPath_2: str, outPath: str):
+def concat_video(in_path_1: str, in_path_2: str, out_path: str):
     """
     Concat 2 video files with same codecs (it use ffmpeg)
-    :param inPath_1: Path to 1 input video file
-    :param inPath_2: Path to 2 input video file
-    :param outPath: Path to output video file
+    :param in_path_1: Path to 1 input video file
+    :param in_path_2: Path to 2 input video file
+    :param out_path: Path to output video file
     :return: None
     """
 
-    ffmpeg.input(f'concat:{inPath_1}|{inPath_2}')\
-        .output(outPath, vcodec='copy', acodec='copy')\
+    ffmpeg.input(f'concat:{in_path_1}|{in_path_2}')\
+        .output(out_path, vcodec='copy', acodec='copy')\
         .overwrite_output()\
-        .run(quiet = True)
+        .run(quiet=True)
 
 
-def getFilesCount(filesTemplate: str) -> int:
+def get_files_count(files_template: str) -> int:
     """
     Get files count from filesTemplate
-    :param filesTemplate:
-    :return: Files count from filesTemplate
+    :param files_template:
+    :return: Files count from files_template
     """
 
-    files = glob.iglob(filesTemplate)
+    files = glob.iglob(files_template)
 
     i = 0
     for _ in files:
@@ -125,7 +125,7 @@ def getFilesCount(filesTemplate: str) -> int:
     return i
 
 
-def intTo2str(number: int) -> str:
+def int_to_2str(number: int) -> str:
     """
     Convert integer to 2 chars string with 0
     :param number: 1 or 2 digit integer number
