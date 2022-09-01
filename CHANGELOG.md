@@ -3,6 +3,9 @@
 This document records all notable changes to
 [utilspy](https://github.com/Genzo4/utilspy).
 
+## 2.0.0 (2022-09-01)
+change names to PEP 8
+
 ## 1.6.0 (2022-08-03)
 
 - function intTo2str

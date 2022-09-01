@@ -35,104 +35,104 @@ $ pip install .
 
 ## Utils
 
-- ### addExt
+- ### add_ext
 Add extension to path.
 
 Support Windows and Linux paths.
 
 ```python
-from utilspy_g4 import addExt
+from utilspy_g4 import add_ext
 
 path = '/test/test.png'
 ext = '2'
-newPath = addExt(path, ext)     # newPath = '/test/test.2.png'
+new_path = add_ext(path, ext)     # new_path = '/test/test.2.png'
 ```
 
-- ### compareFrames
+- ### compare_frames
 Compare 2 frames.
 
 ```python
-from utilspy_g4 import compareFrames
+from utilspy_g4 import compare_frames
 
-is_equal = compareFrames('path_to_frame_1.png', 'path_to_frame_2.png')
+is_equal = compare_frames('path_to_frame_1.png', 'path_to_frame_2.png')
 ```
 
-- ### delExt
+- ### del_ext
 Del extension from path.
 
 Support Windows and Linux paths.
 
 ```python
-from utilspy_g4 import delExt
+from utilspy_g4 import del_ext
 
 path = '/test/test.png'
-newPath = delExt(path)     # newPath = '/test/test'
+new_path = del_ext(path)     # new_path = '/test/test'
 
 path = '/test/test.2.png'
-newPath = delExt(path)     # newPath = '/test/test.2'
+new_path = del_ext(path)     # new_path = '/test/test.2'
 
 path = '/test/test.2.png'
-newPath = delExt(path, 2)     # newPath = '/test/test'
+new_path = del_ext(path, 2)     # new_path = '/test/test'
 ```
 
-- ### templatedRemoveFiles
+- ### templated_remove_files
 Remove files by template
 
 ```python
-from utilspy_g4 import templatedRemoveFiles
+from utilspy_g4 import templated_remove_files
 
-templatedRemoveFiles('/tmp/test_*.txt')
+templated_remove_files('/tmp/test_*.txt')
 ```
 
-- ### getExt
+- ### get_ext
 Get extension from path.
 
 Support Windows and Linux paths.
 
 ```python
-from utilspy_g4 import getExt
+from utilspy_g4 import get_ext
 
 path = '/test/test.png'
-ext = getExt(path)     # ext = 'png'
+ext = get_ext(path)     # ext = 'png'
 
 path = '/test/test.jpeg.png'
-ext = getExt(path)     # ext = 'png'
+ext = get_ext(path)     # ext = 'png'
 
 path = '/test/test.jpeg.png'
-ext = getExt(path, 2)     # ext = 'jpeg'
+ext = get_ext(path, 2)     # ext = 'jpeg'
 
 path = '/test/test.jpeg.png'
-ext = getExt(path, 0)     # ext = ''
+ext = get_ext(path, 0)     # ext = ''
 ```
 
-- ### concatVideo
+- ### concat_video
 Concat 2 video files with same codecs and params.
 It use ffmpeg. Install [ffmpeg](https://ffmpeg.org) and add it to PATH.
 
 ```python
-from utilspy_g4 import concatVideo
+from utilspy_g4 import concat_video
 
-concatVideo('path_to_video_1.ts', 'path_to_video_2.ts', 'path_to_output_video.ts')
+concat_video('path_to_video_1.ts', 'path_to_video_2.ts', 'path_to_output_video.ts')
 ```
 
-- ### intTo2str
+- ### int_to_2str
 Convert integer to 2 chars string with 0.
 
 ```python
-from utilspy_g4 import intTo2str
+from utilspy_g4 import int_to_2str
 
-time = f'{intTo2str(2)}:{intTo2str(23)}:{intTo2str(5)}' # time = '02-23-05'
+time = f'{int_to_2str(2)}:{int_to_2str(23)}:{int_to_2str(5)}' # time = '02-23-05'
 ```
 
-- ### getFilesCount
+- ### get_files_count
 Get files count from template.
 
 Support Windows and Linux paths.
 
 ```python
-from utilspy_g4 import getFilesCount
+from utilspy_g4 import get_files_count
 
-getFilesCount('/tmp/test_*.txt')
+get_files_count('/tmp/test_*.txt')
 ```
 
 [Changelog](https://github.com/Genzo4/utilspy/blob/main/CHANGELOG.md)
@@ -175,109 +175,109 @@ $ pip install .
 
 ## Утилиты
 
-- ### addExt
+- ### add_ext
 Добавляет дополнительное расширение файла перед его последним расширением.
 
 Обрабатывает как Windows пути, так и Linux.
 
 ```python
-from utilspy_g4 import addExt
+from utilspy_g4 import add_ext
 
 path = '/test/test.png'
 ext = '2'
-newPath = addExt(path, ext)     # newPath = '/test/test.2.png'
+newPath = add_ext(path, ext)     # newPath = '/test/test.2.png'
 ```
 
-- ### compareFrames
+- ### compare_frames
 Сравнение двух кадров (изображений).
 
 ```python
-from utilspy_g4 import compareFrames
+from utilspy_g4 import compare_frames
 
-is_equal = compareFrames('path_to_frame_1.png', 'path_to_frame_2.png')
+is_equal = compare_frames('path_to_frame_1.png', 'path_to_frame_2.png')
 ```
 
-- ### delExt
+- ### del_ext
 Удаляет одно или несколько расширений файла
 
 Обрабатывает как Windows пути, так и Linux.
 
 ```python
-from utilspy_g4 import delExt
+from utilspy_g4 import del_ext
 
 path = '/test/test.png'
-newPath = delExt(path)     # newPath = '/test/test'
+new_path = del_ext(path)     # newPath = '/test/test'
 
 path = '/test/test.2.png'
-newPath = delExt(path)     # newPath = '/test/test.2'
+new_path = del_ext(path)     # newPath = '/test/test.2'
 
 path = '/test/test.2.png'
-newPath = delExt(path, 2)     # newPath = '/test/test'
+new_path = del_ext(path, 2)     # newPath = '/test/test'
 ```
 
-- ### templatedRemoveFiles
+- ### templated_remove_files
 Удаление файлов по шаблону
 
 Обрабатывает как Windows пути, так и Linux.
 
 ```python
-from utilspy_g4 import templatedRemoveFiles
+from utilspy_g4 import templated_remove_files
 
-templatedRemoveFiles('/tmp/test_*.txt')
+templated_remove_files('/tmp/test_*.txt')
 ```
 
-- ### getExt
+- ### get_ext
 Возвращает расширение файла.
 Можно указать какое по счёту расширение надо вернуть.
 
 Обрабатывает как Windows пути, так и Linux.
 
 ```python
-from utilspy_g4 import getExt
+from utilspy_g4 import get_ext
 
 path = '/test/test.png'
-ext = getExt(path)     # ext = 'png'
+ext = get_ext(path)     # ext = 'png'
 
 path = '/test/test.jpeg.png'
-ext = getExt(path)     # ext = 'png'
+ext = get_ext(path)     # ext = 'png'
 
 path = '/test/test.jpeg.png'
-ext = getExt(path, 2)     # ext = 'jpeg'
+ext = get_ext(path, 2)     # ext = 'jpeg'
 
 path = '/test/test.jpeg.png'
-ext = getExt(path, 0)     # ext = ''
+ext = get_ext(path, 0)     # ext = ''
 ```
 
-- ### concatVideo
+- ### concat_video
 Объединение двух видео файлов с одинаковыми кодеками и параметрами в один файл.
 Используется ffmpeg. Для использования установите [ffmpeg](https://ffmpeg.org) 
 и пропишите его в PATH.
 
 ```python
-from utilspy_g4 import concatVideo
+from utilspy_g4 import concat_video
 
-concatVideo('path_to_video_1.ts', 'path_to_video_2.ts', 'path_to_output_video.ts')
+concat_video('path_to_video_1.ts', 'path_to_video_2.ts', 'path_to_output_video.ts')
 ```
 
-- ### intTo2str
+- ### int_to_2str
 Преобразует число в строку из двух символов.
 Если число состоит из одной цифры, то спереди добавляется '0'.
 
 ```python
-from utilspy_g4 import intTo2str
+from utilspy_g4 import int_to_2str
 
-time = f'{intTo2str(2)}:{intTo2str(23)}:{intTo2str(5)}' # time = '02-23-05'
+time = f'{int_to_2str(2)}:{int_to_2str(23)}:{int_to_2str(5)}' # time = '02-23-05'
 ```
 
-- ### getFilesCount
+- ### get_files_count
 Возвращает количество файлов в папке по шаблону.
 
 Обрабатывает как Windows пути, так и Linux.
 
 ```python
-from utilspy_g4 import getFilesCount
+from utilspy_g4 import get_files_count
 
-getFilesCount('/tmp/test_*.txt')
+get_files_count('/tmp/test_*.txt')
 ```
 
 ***
