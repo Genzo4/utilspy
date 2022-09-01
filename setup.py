@@ -8,7 +8,7 @@ with open(path.join(top_level_directory, 'README.md'), encoding='utf-8') as file
 
 setup(
    name='utilspy_g4',
-   version='2.0.0',
+   version='2.0.1',
    description='Small utils for Python',
    long_description=long_description,
    long_description_content_type='text/markdown',
@@ -36,17 +36,17 @@ setup(
       'Topic :: Utilities'
    ],
    keywords=['utils', 'utilspy', 'g4',
-             'add ext', 'addExt', 'addext',
-             'compareframes', 'compare frames', 'compareFrames',
-             'delExt', 'del ext', 'delext',
-             'templatedRemoveFiles', 'templated remove files', 'remove files',
-             'getExt', 'get ext', 'getext',
-             'concatVideo', 'concat video', 'concatvideo',
-             'intTo2str', 'inttostr', 'int2str',
-             'getFilesCount', 'files count',
+             'add ext', 'add_ext',
+             'compare_frames', 'compare frames',
+             'del_ext', 'del ext',
+             'templated_remove_files', 'templated remove files', 'remove files',
+             'get_ext', 'get ext',
+             'concat_video', 'concat video',
+             'int_to_2str', 'inttostr', 'int2str',
+             'get_files_count', 'files count',
              ],
    license='MIT',
    packages=['utilspy_g4'],
-   install_requires=['opencv-contrib-python'],
+   install_requires=['opencv-contrib-python', 'ffmpeg-python'],
    python_requires='>=3.6'
 )
