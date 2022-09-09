@@ -3,8 +3,14 @@
 This document records all notable changes to
 [utilspy](https://github.com/Genzo4/utilspy).
 
+## 2.1.0 (2022-09-09)
+
+- function to_date
+- function date_template
+
 ## 2.0.0 (2022-09-01)
-change names to PEP 8
+
+- change names to PEP 8
 
 ## 1.6.0 (2022-08-03)
 

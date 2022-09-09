@@ -135,6 +135,36 @@ from utilspy_g4 import get_files_count
 get_files_count('/tmp/test_*.txt')
 ```
 
+- ### date_template
+Returns the date string representation template.
+
+```python
+from utilspy_g4 import date_template
+
+template = date_template('2022/10/28')  # template = '%Y/%m/%d'
+```
+
+- ### to_date
+Converts various representations of a date to the date format of the standard datetime library.
+
+Currently supported:
+- date
+- datetime
+- str ('2022/01/02', ...)
+
+```python
+from utilspy_g4 import to_date
+
+d = to_date('2022/10/28')
+
+# type(d) == date
+# d.year = 2022
+# d.month = 10
+# d.day = 28
+```
+
+***
+
 [Changelog](https://github.com/Genzo4/utilspy/blob/main/CHANGELOG.md)
 
 ***
@@ -278,6 +308,34 @@ time = f'{int_to_2str(2)}:{int_to_2str(23)}:{int_to_2str(5)}' # time = '02-23-05
 from utilspy_g4 import get_files_count
 
 get_files_count('/tmp/test_*.txt')
+```
+
+- ### date_template
+Возвращает шаблон строкового представления даты.
+
+```python
+from utilspy_g4 import date_template
+
+template = date_template('2022/10/28')  # template = '%Y/%m/%d'
+```
+
+- ### to_date
+Преобразует различные представления даты в формат date стандартной библиотеки datetime.
+
+На данный момент поддерживается:
+- date
+- datetime
+- str ('2022/01/02', ...)
+
+```python
+from utilspy_g4 import to_date
+
+d = to_date('2022/10/28')
+
+# type(d) == date
+# d.year = 2022
+# d.month = 10
+# d.day = 28
 ```
 
 ***
