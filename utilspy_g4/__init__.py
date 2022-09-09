@@ -2,6 +2,7 @@ import os
 import cv2
 import glob
 import ffmpeg
+from datetime import date, datetime
 
 
 def add_ext(path: str, ext: str) -> str:
@@ -136,3 +137,56 @@ def int_to_2str(number: int) -> str:
         return '0' + str(number)
 
     return str(number)
+
+
+def to_date(date_) -> date or None:
+    """
+    Convert date in various formats to date format
+
+    :param date_: date in various formats
+    :return: date format
+    """
+    if isinstance(date_, date) or date_ is None:
+        return date_
+    elif isinstance(date_, str):
+        template = date_template(date_)
+        if template is None:
+            raise TypeError()
+        d = datetime.strptime(date_, template)
+        return date(d.year, d.month, d.day)
+    elif isinstance(date_, datetime):
+        return date(date_.year, date_.month, date_.day)
+    else:
+        raise TypeError()
+
+
+def date_template(date_: str) -> str or None:
+    """
+    Formats: '2006.05.30', '2006-05-30', '2006/05/30', '30.05.2006', '30-05-2006', '30/05/2006'
+
+    :param date_: String date
+    :return: date template
+    """
+
+    try:
+        if date_[4] == '.' and date_[7] == '.':
+            return '%Y.%m.%d'
+
+        if date_[4] == '-' and date_[7] == '-':
+            return '%Y-%m-%d'
+
+        if date_[4] == '/' and date_[7] == '/':
+            return '%Y/%m/%d'
+
+        if date_[2] == '.' and date_[5] == '.':
+            return '%d.%m.%Y'
+
+        if date_[2] == '-' and date_[5] == '-':
+            return '%d-%m-%Y'
+
+        if date_[2] == '/' and date_[5] == '/':
+            return '%d/%m/%Y'
+    except IndexError:
+        return None
+
+    return None
