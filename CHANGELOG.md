@@ -5,7 +5,8 @@ This document records all notable changes to
 
 ## 2.2.0 (2023-04-05)
 
-- move media large functions (compare_frames, cancat_video) to utilspy_media_g4
+- move large function compare_frames to module compare_frames_g4
+- move large function concat_video to module concat_video_g4
 
 ## 2.1.0 (2022-09-09)
 
