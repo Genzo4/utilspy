@@ -3,6 +3,10 @@
 This document records all notable changes to
 [utilspy](https://github.com/Genzo4/utilspy).
 
+## 2.2.0 (2023-04-05)
+
+- move media large functions (compare_frames, cancat_video) to utilspy_media_g4
+
 ## 2.1.0 (2022-09-09)
 
 - function to_date

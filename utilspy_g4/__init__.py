@@ -1,7 +1,5 @@
 import os
-import cv2
 import glob
-import ffmpeg
 from datetime import date, datetime
 
 
@@ -17,27 +15,6 @@ def add_ext(path: str, ext: str) -> str:
 
     path_ext = os.path.splitext(path)
     return path_ext[0] + '.' + ext + path_ext[1]
-
-
-def compare_frames(frame_path_1: str, frame_path_2: str) -> bool:
-    """
-    Compare 2 frames
-
-    :param frame_path_1: Path to frame 1
-    :param frame_path_2: Path to frame 2
-    :return: bool
-    """
-
-    # TODO: Check different frames size
-
-    frame_1 = cv2.imread(frame_path_1)
-    frame_2 = cv2.imread(frame_path_2)
-    diff = cv2.norm(frame_1, frame_2, cv2.NORM_L2)
-
-    if diff == 0.0:
-        return True
-
-    return False
 
 
 def del_ext(path: str, ext_count: int = 1) -> str:
@@ -93,21 +70,6 @@ def get_ext(path: str, ext_count: int = 1) -> str:
         last_ext = last_ext[1:]
 
     return last_ext
-
-
-def concat_video(in_path_1: str, in_path_2: str, out_path: str):
-    """
-    Concat 2 video files with same codecs (it use ffmpeg)
-    :param in_path_1: Path to 1 input video file
-    :param in_path_2: Path to 2 input video file
-    :param out_path: Path to output video file
-    :return: None
-    """
-
-    ffmpeg.input(f'concat:{in_path_1}|{in_path_2}')\
-        .output(out_path, vcodec='copy', acodec='copy')\
-        .overwrite_output()\
-        .run(quiet=True)
 
 
 def get_files_count(files_template: str) -> int:

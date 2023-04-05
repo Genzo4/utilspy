@@ -27,7 +27,6 @@ Download and install the package:
 ```bash
 $ git clone https://github.com/Genzo4/utilspy
 $ cd utilspy
-$ pip install -r requirements.txt
 $ pip install .
 ```
 
@@ -46,15 +45,6 @@ from utilspy_g4 import add_ext
 path = '/test/test.png'
 ext = '2'
 new_path = add_ext(path, ext)     # new_path = '/test/test.2.png'
-```
-
-- ### compare_frames
-Compare 2 frames.
-
-```python
-from utilspy_g4 import compare_frames
-
-is_equal = compare_frames('path_to_frame_1.png', 'path_to_frame_2.png')
 ```
 
 - ### del_ext
@@ -103,16 +93,6 @@ ext = get_ext(path, 2)     # ext = 'jpeg'
 
 path = '/test/test.jpeg.png'
 ext = get_ext(path, 0)     # ext = ''
-```
-
-- ### concat_video
-Concat 2 video files with same codecs and params.
-It use ffmpeg. Install [ffmpeg](https://ffmpeg.org) and add it to PATH.
-
-```python
-from utilspy_g4 import concat_video
-
-concat_video('path_to_video_1.ts', 'path_to_video_2.ts', 'path_to_output_video.ts')
 ```
 
 - ### int_to_2str
@@ -177,7 +157,7 @@ d = to_date('2022/10/28')
 ![PyPI - License](https://img.shields.io/pypi/l/utilspy-g4)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/utilspy-g4)
 
-Небольшие утилитки для Python.
+Небольшие утилиты для Python.
 
 ***
 
@@ -197,7 +177,6 @@ $ pip install utilspy-g4
 ```bash
 $ git clone https://github.com/Genzo4/utilspy
 $ cd utilspy
-$ pip install -r requirements.txt
 $ pip install .
 ```
 
@@ -216,15 +195,6 @@ from utilspy_g4 import add_ext
 path = '/test/test.png'
 ext = '2'
 newPath = add_ext(path, ext)     # newPath = '/test/test.2.png'
-```
-
-- ### compare_frames
-Сравнение двух кадров (изображений).
-
-```python
-from utilspy_g4 import compare_frames
-
-is_equal = compare_frames('path_to_frame_1.png', 'path_to_frame_2.png')
 ```
 
 - ### del_ext
@@ -276,17 +246,6 @@ ext = get_ext(path, 2)     # ext = 'jpeg'
 
 path = '/test/test.jpeg.png'
 ext = get_ext(path, 0)     # ext = ''
-```
-
-- ### concat_video
-Объединение двух видео файлов с одинаковыми кодеками и параметрами в один файл.
-Используется ffmpeg. Для использования установите [ffmpeg](https://ffmpeg.org) 
-и пропишите его в PATH.
-
-```python
-from utilspy_g4 import concat_video
-
-concat_video('path_to_video_1.ts', 'path_to_video_2.ts', 'path_to_output_video.ts')
 ```
 
 - ### int_to_2str

@@ -8,7 +8,7 @@ with open(path.join(top_level_directory, 'README.md'), encoding='utf-8') as file
 
 setup(
    name='utilspy_g4',
-   version='2.1.0',
+   version='2.2.0',
    description='Small utils for Python',
    long_description=long_description,
    long_description_content_type='text/markdown',
@@ -26,6 +26,7 @@ setup(
       'Programming Language :: Python :: 3.8',
       'Programming Language :: Python :: 3.9',
       'Programming Language :: Python :: 3.10',
+      'Programming Language :: Python :: 3.11',
       'License :: OSI Approved :: MIT License',
       'Operating System :: OS Independent',
       'Intended Audience :: Developers',
@@ -37,11 +38,9 @@ setup(
    ],
    keywords=['utils', 'utilspy', 'g4',
              'add ext', 'add_ext',
-             'compare_frames', 'compare frames',
              'del_ext', 'del ext',
              'templated_remove_files', 'templated remove files', 'remove files',
              'get_ext', 'get ext',
-             'concat_video', 'concat video',
              'int_to_2str', 'inttostr', 'int2str',
              'get_files_count', 'files count',
              'to_date', 'date',
@@ -49,6 +48,6 @@ setup(
              ],
    license='MIT',
    packages=['utilspy_g4'],
-   install_requires=['opencv-contrib-python', 'ffmpeg-python'],
+   install_requires=[],
    python_requires='>=3.6'
 )
